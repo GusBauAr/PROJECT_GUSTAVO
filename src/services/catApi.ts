@@ -9,6 +9,9 @@ export const fetchCatImages = async (limit = 12): Promise<CatImage[]> => {
       'x-api-key': API_KEY,
     },
   });
+  if (!response.ok) {
+    throw new Error('Error de imagen de gato');
+  }
 
   const data: CatImage[] = await response.json();
   return data;

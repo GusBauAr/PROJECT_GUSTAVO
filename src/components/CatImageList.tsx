@@ -1,10 +1,16 @@
 import { ImageList, ImageListItem, ImageListItemBar, ListSubheader, IconButton} from "@mui/material"
 import InfoIcon from '@mui/icons-material/Info';
+import { Key, useEffect, useState } from "react";
+import { fetchCatImages } from '../services/catApi';
 import { CatImage } from "../types/Cat";
 
 
 
 const CatImageList: React.FC = () => {
+    const [cats,setCats] = useState <CatImage[]>([]);
+    useEffect(() => {
+        fetchCatImages().then(setCats);
+      }, []);
     
 
     
