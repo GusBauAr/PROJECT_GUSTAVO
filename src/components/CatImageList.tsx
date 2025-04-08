@@ -1,4 +1,4 @@
-import { ImageList, ImageListItem, ImageListItemBar, ListSubheader, IconButton} from "@mui/material"
+import { ImageList, ImageListItem, ImageListItemBar, IconButton} from "@mui/material"
 import InfoIcon from '@mui/icons-material/Info';
 import { Key, useEffect, useState } from "react";
 import { fetchCatImages } from '../services/catApi';
@@ -15,7 +15,7 @@ const CatImageList: React.FC = () => {
 
 
     return (
-        <ImageList sx={{ width: 1350, height: 550 }} cols={4} rowHeight={300}>
+        <ImageList sx={{ width: 1365, height: 550 }} cols={6} rowHeight={300}>
           
           {cats.map((cat: { id: Key | null | undefined; url: any; }) => (
             <ImageListItem key={cat.id}>
