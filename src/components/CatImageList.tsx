@@ -13,12 +13,10 @@ const CatImageList: React.FC = () => {
       }, []);
     
 
-    
+
     return (
-        <ImageList sx={{ width: 500, height: 600 }}>
-          <ImageListItem key="Subheader" cols={2}>
-            <ListSubheader component="div">GALERIA</ListSubheader>
-          </ImageListItem>
+        <ImageList sx={{ width: 1350, height: 550 }} cols={4} rowHeight={300}>
+          
           {cats.map((cat: { id: Key | null | undefined; url: any; }) => (
             <ImageListItem key={cat.id}>
               <img
